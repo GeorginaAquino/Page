@@ -16,9 +16,9 @@ import seaborn as sns
 def set_custom_style():
     st.markdown("""
         <style>
-        /* Fondo general */
+       /* Fondo general */
         .stApp {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
         }
         
         /* Título principal */
@@ -43,7 +43,7 @@ def set_custom_style():
         
         /* Tarjetas personalizadas */
         .custom-card {
-            background: white;
+            background: gray;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -849,8 +849,8 @@ def main():
     set_custom_style()
     
     # Header
-    st.markdown("<h1 class='main-title'>🤖 Sistema de Machine Learning Universal</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='subtitle'>🚀 Funciona con Cualquier Dataset CSV/Excel</p>", unsafe_allow_html=True)
+    st.markdown("<h1 class='main-title'>🤖 Sistema de Machine Learning</h1>", unsafe_allow_html=True)
+    
     
     # Sidebar
     with st.sidebar:
@@ -886,7 +886,7 @@ def main():
         uploaded_file = st.file_uploader(
             "Arrastra o selecciona tu archivo",
             type=["csv", "xlsx", "xls"],
-            help="El sistema se adapta automáticamente a cualquier estructura de datos"
+            help=""
         )
     
     with col_config:
@@ -949,11 +949,11 @@ def main():
         
         with fe_col1:
             apply_temporal = st.checkbox("📅 Crear características temporales", value=True, 
-                                        help="Detecta y procesa automáticamente columnas de fecha")
+                                        )
         
         with fe_col2:
             apply_interactions = st.checkbox("🔗 Crear interacciones numéricas", value=False,
-                                            help="Crea productos entre variables numéricas (aumenta complejidad)")
+                                            )
         
         if apply_temporal or apply_interactions:
             with st.spinner("🔄 Creando nuevas características..."):
@@ -1344,5 +1344,4 @@ def main():
         """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
-
     main()
