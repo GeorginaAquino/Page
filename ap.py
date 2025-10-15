@@ -309,18 +309,7 @@ def set_custom_style():
 PROJECT_INFO = """
 <div class="info-box">
 
-### 🎯 **Sistema de Machine Learning Universal**
-
-**📊 Características Principales**  
-Sistema adaptable que funciona con **cualquier dataset CSV o Excel** para problemas de regresión.
-
-**💡 Capacidades:**
-- 🔄 Carga automática de cualquier formato (CSV, Excel)
-- 🎯 Selección flexible de variable objetivo
-- 🔧 Detección automática de tipos de datos
-- 📊 Feature engineering inteligente
-- 🤖 Optimización automática de hiperparámetros
-
+### 🎯 **Sistema de Machine Learning**
 **🤖 Algoritmo: Ridge Regression**
 - ✅ Maneja multicolinealidad efectivamente
 - ✅ Previene overfitting con regularización L2
@@ -1355,4 +1344,5 @@ def main():
         """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
+
     main()
